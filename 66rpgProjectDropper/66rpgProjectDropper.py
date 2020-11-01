@@ -8,8 +8,6 @@ import datetime
 import hashlib
 import hmac
 
-OSS_ACCESS_KEY = ""
-ACCESS_SECRET = ""
 
 gameLink = input('请输入游戏链接、gindex 或 guid\n如 66rpg.com/game/17893、17893、或 5a9c559b69d8df96c2f7788ff6899133：\n')
 print('正在获取版本信息...')
@@ -123,8 +121,7 @@ for i in range(len(fileName)):
 
 print('素材文件下载完成')
 
-if OSS_ACCESS_KEY == ACCESS_SECRET:
-    os._exit(0)
+os._exit(0)
 
 print('准备下载工程文件')
 
@@ -139,6 +136,8 @@ Host: ouser.oss.aliyuncs.com
 Date: Mon, 27 Jul 2020 10:20:37 GMT
 Authorization: OSS uEwcePgrON2VXsbv:$sign$
 '''
+OSS_ACCESS_KEY = "uEwcePgrON2VXsbv"
+ACCESS_SECRET = "GHsIlajWNEkiF2QoJyrpq1rmx2uwLs"
 HOST = "ouser.oss.aliyuncs.com"
 GMT_FORMAT = '%a, %d %b %Y %H:%M:%S GMT'
 
